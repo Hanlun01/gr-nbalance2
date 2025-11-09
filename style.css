@@ -130,8 +130,182 @@ nav ul li a{
     font-size: 1.1rem;
     border-radius: 0 12px 12px 0;
 }
+
+.underheader1{
+    background-color: #F0EEDB;
+    padding: 3em 2em;
+    text-align: center;
+}
+
+.underheader1 p{
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+.opskrifter{
+    text-align: center;
+    background-color: #F9F9F3;
+    padding: 3em 1em;
+}
+
+.opskrifter h2{
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #111;
+}
+
+.opskrift-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.opskrift-grid img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.se-mere{
+    margin-top: 2.5em;
+    color: #111;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.se-mere i{
+    font-size: 1.2em;
+}
+
+.se-mere a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.blok{
+    background-color: #F0EEDB;
+    padding: 3em 1.5em;
+    text-align: center;
+}
+
+.blok h3{
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+.blok a{
+    color: #111;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.blok a:hover{
+    color: #5e955f;
+    text-decoration: #333;
+}
+
+.blok img{
+    width: 100%;
+    max-width: 600px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: block;
+    margin:  0 auto;
+    margin-top: 1em;
+}
+
+.desktop-tekst{
+    display: none;
+}
+
+.grøn-linje{
+    background-color: #707644;
+    height: 15px;
+    width: 100%;
+}
+
+.spørg-sektion{
+    background-color: #F9F9F3;
+    padding: 3em 1.5em;
+    text-align: left;
+}
+
+details {
+    border-top: 2px solid #222;
+    padding: 1em 0;
+    cursor: pointer;
+}
+
+summary{
+    font-size: 1.2em;
+    font-weight: 500;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+summary::after{
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after{
+    transform: rotate(180deg);
+}
+
+details p{
+    margin-top: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+footer{
+    background-color: #6F7C12;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2em;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.footer-links p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.flag{
+    width: 25px;
+    height: auto;
+}
+
+
 /******************************DESKTOP RESPONSIV***************************************/
-@media (min-width: 769px){
+@media (min-width: 769px) {
 
     #bars{
         display: none;
@@ -164,4 +338,40 @@ nav ul li a{
     }
 
 
+}
+
+@media (min-width: 769px) {
+    .opskrift-grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 769px) {
+    .blok {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+        text-align: left;
+        padding: 4em 6em;
+    }
+
+    .blok h3{ 
+        font-size: 2em;
+    }
+
+    .blok img{
+        max-width: 450px;
+        border-radius: 6px;
+    }
+
+    .desktop-tekst {
+        display: block;
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-top: 1em;
+        color: #333;
+    }
 }
