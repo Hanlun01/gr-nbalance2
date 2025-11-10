@@ -345,6 +345,94 @@ box-sizing: border-box;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12)
 }
 
+.forfatter{
+    font-size: 14px;
+    color: 333;
+    margin-bottom: 14px;
+}
+
+.forfatter strong{
+    font-weight: 600;
+}
+
+
+.artikel-tekst{
+background: #F0EEDB;
+margin-top: 20px;
+padding: 20px;
+border-radius: 6px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);    
+}
+
+.artikel-tekst p{
+    font-size: 18px;
+    line-height: 1.7;
+    color: #111;
+    margin: 16px 0;
+}
+
+.related{
+    background: white;
+    padding: 28px 16px;
+    text-align: center;
+}
+
+.related h2{
+    font-size: 28px;
+    margin: 0 0 16px 0;}
+
+    .rel-wrap{
+        position: relative;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .rel-grid{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .rel-grid a{
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .rel-grid img{
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        display: block;
+    }
+
+    .rel-arrow{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background: none;
+        color: #111;
+        font-size: 26px;
+        padding: 6px;
+        opacity: 9;
+        pointer-events: none;
+    }
+
+    .rel-arrow.left{
+        left: -4px
+    }
+    .rel-arrow.right{
+        right: -4px
+    }
+
+
+
 /******************************DESKTOP RESPONSIV***************************************/
 @media (min-width: 769px) {
 
@@ -441,5 +529,25 @@ box-sizing: border-box;
         color: #555;
         margin-top: 8px;
         text-align: left;
+    }
+    .artikel-tekst{
+        padding: 28px;
+        margin-top: 24px;
+    }
+
+    .artikel-tekst p{
+        font-size: 20px;
+    }
+
+    .related h2{
+        font-size: 32px;
+        margin-bottom: 18px;
+    }
+    .rel-grid{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+    }
+    .rel-arrow{
+        font-size: 32px;
     }
 }
