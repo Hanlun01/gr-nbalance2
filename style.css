@@ -17,7 +17,7 @@ h1{
 }
 
 header nav{
-    background-color: #6F7C12;
+    background-color: #707644;
     padding: 1em;
     display: flex;
     justify-content: space-between;
@@ -278,7 +278,7 @@ details p{
 }
 
 footer{
-    background-color: #6F7C12;
+    background-color: #707644;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -303,6 +303,47 @@ footer{
     height: auto;
 }
 
+
+/***********************************************BLOG********************************************/
+
+.page-sep{
+    background-color: #F0EEDB;
+    height: 25px;
+    width: 100%;
+}
+
+.artikel{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.artikel >  *{
+padding-left: 20px;
+padding-right: 20px;
+box-sizing: border-box;
+}
+
+.artikel h1{
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 400;
+   margin: 0 0 20px 0;
+   text-align: center;
+}
+
+.artikel figure{
+    margin: 0;
+}
+
+.artikel img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12)
+}
 
 /******************************DESKTOP RESPONSIV***************************************/
 @media (min-width: 769px) {
@@ -373,5 +414,32 @@ footer{
         line-height: 1.6;
         margin-top: 1em;
         color: #333;
+    }
+}
+
+@media (min-width: 769px){
+
+    .artikel{
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+    .artikel h1{
+        text-align: left;
+        font-size: 48px;
+    }
+    .artikel img{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 4px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    .artikel figcaption{
+        font-size: 14px;
+        color: #555;
+        margin-top: 8px;
+        text-align: left;
     }
 }
