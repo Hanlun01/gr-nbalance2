@@ -9,14 +9,14 @@
 </head>
 <body>
     <header>
-        <nav><!---------------------Navigation og logo------------------------>
+        <nav><!--Navigation og logo-->
             <a href="index.html"><img class="logo" src="img/logo-grøn-balance.svg" alt="Grøn Balance logo"></a>
 
-            <!------------Hamburger----------->
+            <!--Hamburger-->
             <div id="bars">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <!-------------------------------->
+        <!---->
             <ul class="nav-menu"> <!--Desktop menu-->
             <li><a href="blog.html">Blog</a></li>
             <li><a href="#">Om os</a></li>
@@ -27,14 +27,14 @@
 
 
     <main>
-    <section class="hero"> <!----------------Hero billede------------------->
+    <section class="hero"> <!--Hero billede-->
         <img src="img/billede1.png" alt="">
 
         <div class="hero-tekst">
             <h1>Grøn Balance</h1>
-<!------------------------------------------------Søgebar------------------------------->
+<!--Søgebar-->
            <form class="søgebar" action="">
-            <input type="text" placeholder="Søg efter opskrifter" required>
+            <input type="text" placeholder="Søg efter opskrifter" maxlength="20" required> <!--Hjælper-->
             <button>
                 <i class="fas fa-search"></i>Søg
             </button>
@@ -43,21 +43,20 @@
         </div>
     </section>
 
-    <section class="underheader1"> <!----------------------------Underheader 1------------------------------------>
-        <p>Find inspiration til nemme, sunde og bæredygtige opskrifter, der passer til en travl hverdag.
+    <div class="underheader1"> <!--Underheader 1-->
+        <p>Find inspiration til nemme, sunde og bæredygtige opskrifter, der passer lige præcis til din hverdag.
         </p>
-    </section>
+    </div>
 
     <section class="opskrifter">
-        <h2>opskrifter</h2>
-
+        
         <div class="opskrift-grid">
-            <img src="img/gulerodsuppe.jpg" alt="Gulerodsuppe">
-            <img src="img/opskriftbillede.jpg" alt="Rød suppe">
-            <img src="img/bowl.jpg" alt="Grøntsags bowl">
-            <img src="img/stegt kylling.jpg" alt="Stegt kylling og salat">
-            <img src="img/vegansk pasta.jpg" alt="Vegansk Pasta">
-            <img src="img/tomat og ærter.jpg" alt="Tomat og ærter">
+            <a href="#"><img src="img/gulerodsuppe.jpg" alt="Gulerodsuppe"></a>
+            <a href="#"><img src="img/opskriftbillede.jpg" alt="Rød suppe"></a>
+            <a href="#"><img src="img/bowl.jpg" alt="Grøntsags bowl"></a>
+            <a href="#"><img src="img/stegt-kylling.jpg" alt="Stegt kylling og salat"></a>
+            <a href="#"><img src="img/vegansk-pasta.jpg" alt="Vegansk Pasta"></a>
+            <a href="#"><img src="img/tomat-og-ærter.jpg" alt="Tomat og ærter"></a>
         </div>
 
         <div class="se-mere">
@@ -69,10 +68,13 @@
 
     <section class="blok">
         <div class="blok-indhold">
-            <h3><a href="#">Den bæredygtige tallerken</a></h3>
-            <p class="desktop-tekst">Læs om hvordan du nemt kan gøre dine måltider mere klimavenlige uden at gå på kompromis med smag, kvalitet og sundhed. Få indsigt i hvordan små valg i køkkenet kan mindske dit klimaaftryk og samtidig give kroppen mere næring og energi i hverdagen. Det handler om at finde en naturlig balance mellem nydelse, bæredygtighed og velvære.</p>
+            <h3>Den bæredygtige tallerken</h3>
+            <p class="desktop-tekst">Læs om hvordan du nemt kan gøre dine måltider mere klimavenlige uden at gå på kompromis med smag, kvalitet og sundhed. Få indsigt i hvordan små valg i køkkenet kan mindske dit klimaaftryk og samtidig give kroppen mere næring og energi i hverdagen.</p>
         </div>
-         <img src="img/billede2.jpg" alt="">
+
+         <div class="blok-billede-link"><img src="img/billede2.jpg" alt="">
+        <a href="blog.html" class="billede-knap">Læs mere</a>
+    </div>
     </section>
 
     <div class="grøn-linje"></div>
@@ -82,7 +84,7 @@
             <summary>Ofte stillede spørgsmål
                 <i class="fas fa-chevron-down"></i>
             </summary>
-            <p>Heer kan du finde svar på de mest almindelige spørgsmål om sundhed, klima og madvaner.</p>
+            <p>Her kan du finde svar på de mest almindelige spørgsmål om sundhed, klima og madvaner.</p>
         </details>
         <details>
             <summary>Opskrifter og inspiration
@@ -95,12 +97,14 @@
     <footer>
         <div class="footer-links">
             <p>Kontakt</p>
-            <img src="" alt="">
+           
+
         </div>
         
         <div class="footer-links">
             <p>Om os</p>
-            <img src="" alt="">
+            
+
         </div>
     </footer>
 

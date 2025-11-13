@@ -104,12 +104,12 @@ nav ul li a{
 }
 
 .søgebar input::placeholder{
-    color: #999;
+    color: #646464;
 }
 
 .søgebar button{
     padding: 0px 20px;
-    background: #5e955f;
+    background: #707644;
     color: white;
     border: none;
     font-size: 1rem;
@@ -119,6 +119,10 @@ nav ul li a{
     justify-content: center;
     gap: 8px;
     font-weight: 500;
+}
+
+.søgebar button:hover{
+    background-color: #8f9655;
 }
 
 .søgebar button i{
@@ -152,6 +156,7 @@ nav ul li a{
     padding: 3em 1em;
 }
 
+
 .opskrifter h2{
     font-size: 2em;
     margin-bottom: 1em;
@@ -173,6 +178,11 @@ nav ul li a{
     display: block;
     border-radius: 8px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.opskrift-grid a img:hover{
+    transform: scale(1.03);
+    opacity: 0.9;
 }
 
 .se-mere{
@@ -210,26 +220,55 @@ nav ul li a{
     margin-bottom: 1em;
 }
 
-.blok a{
-    color: #111;
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+.blok-billede-link{
+    position: relative;
+    display: block;
 }
 
-.blok a:hover{
-    color: #5e955f;
-    text-decoration: #333;
-}
-
-.blok img{
+.blok-billede-link img{
     width: 100%;
-    max-width: 600px;
+    max-width: none;
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: block;
-    margin:  0 auto;
     margin-top: 1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.blok-billede-link img:hover{
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+.billede-knap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffffcc;
+    opacity: 95%;
+    padding: 1em 2em;
+    font-size: 1.1em;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #111;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+
+    min-width: 140px;
+    min-height: 44px; /*wcag princip*/ 
+}
+
+.blok-billede-link:hover .billede-knap{
+    background-color: #c0c96a;
+    transform: translateX(-50%) scale(1.05);
+}
+
+
 
 .desktop-tekst{
     display: none;
@@ -265,6 +304,14 @@ summary{
 summary::after{
     font-size: 1.2em;
     transition: transform 0.3s ease;
+}
+
+summary i{
+   transition: transform 0.3s ease, color 0.3s ease;
+}
+
+summary:hover i{
+    transform: scale(11.2em);
 }
 
 details[open] summary::after{
@@ -378,7 +425,7 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .related h2{
-    font-size: 28px;
+    font-size: 25px;
     margin: 0 0 16px 0;}
 
     .rel-wrap{
@@ -393,7 +440,7 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         padding: 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
+        gap: 22px;
     }
 
     .rel-grid a{
@@ -411,25 +458,20 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         display: block;
     }
 
-    .rel-arrow{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        border: none;
-        background: none;
-        color: #111;
-        font-size: 26px;
-        padding: 6px;
-        opacity: 9;
-        pointer-events: none;
+    .rel-grid a img{
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        cursor: pointer;
     }
 
-    .rel-arrow.left{
-        left: -4px
+    .rel-grid a img:hover{
+        transform: scale(1.03);
+        opacity: 0.9;
     }
-    .rel-arrow.right{
-        right: -4px
-    }
+
+       .rel-grid li:nth-child(n+3) {
+        display: none;
+}
+
 
 
 
@@ -481,10 +523,28 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     .blok {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         gap: 3em;
         text-align: left;
         padding: 4em 6em;
+    }
+
+    .blok-indhold{
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .blok-billede-link{
+        flex: 1;
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .blok-billede-link img{
+        width: 100%;
+        max-width: 100%;
+        border-radius: 4px;
     }
 
     .blok h3{ 
@@ -547,7 +607,11 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         grid-template-columns: repeat(4, 1fr);
         gap: 22px;
     }
-    .rel-arrow{
-        font-size: 32px;
+
+    .rel-grid li:nth-child(n+3){ 
+        display: block;
     }
+    
+
+
 }
