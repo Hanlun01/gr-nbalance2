@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <title>Grøn Balance</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a0f7544959.js" crossorigin="anonymous"></script>
@@ -18,6 +23,8 @@
             </div>
         <!---->
             <ul class="nav-menu"> <!--Desktop menu-->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Opskrifter</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="#">Om os</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
@@ -32,13 +39,21 @@
 
         <div class="hero-tekst">
             <h1>Grøn Balance</h1>
-<!--Søgebar-->
-           <form class="søgebar" action="">
-            <input type="text" placeholder="Søg efter opskrifter" maxlength="20" required> <!--Hjælper-->
-            <button>
-                <i class="fas fa-search"></i>Søg
-            </button>
+            
+            <!--Søgebar-->
+
+           <form class="søgebar" action="#" method="get">
+
+            <label for="search" class="visually-hidden">Søg efter opskrifter</label>
+
+            <input type="text" id="search" name="search" placeholder="Søg efter opskrifter" maxlength="60" required>
+            
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Søg</button>
            </form>
+
+           <h2 class="overskrift2">Nemt. Sundt. Bæredygtigt.</h2>
 
         </div>
     </section>
@@ -101,7 +116,10 @@
         </details>
     </section>
 
-    <footer>
+
+    </main>
+
+     <footer>
         <div class="footer-links">
             <p>Kontakt</p>
            
@@ -115,6 +133,5 @@
         </div>
     </footer>
 
-    </main>
 </body>
 </html>

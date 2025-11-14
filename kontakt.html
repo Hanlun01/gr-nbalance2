@@ -7,11 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-         <!--Kontaktform - hovedindhold--> 
+
+    <header>
+        <nav><!--Navigation og logo-->
+            <a href="index.html"><img class="logo" src="img/logo-grøn-balance.svg" alt="Grøn Balance logo"></a>
+
+            <!--Hamburger-->
+            <div id="bars">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        <!---->
+            <ul class="nav-menu"> <!--Desktop menu-->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Opskrifter</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Om os</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1 class="kontakt-h1">Kontakt os</h1>
+
     <main class="kontaktform">
-        <h1>Kontakt os</h1>
-            <p class="kontakt-tekst">Skriv til os via kontaktformularen og så vender vi tilbage til dig</p>
+         <!--Kontaktform - hovedindhold--> 
+            <p class="kontakt-tekst">Skriv til os og modtag opskrifter til alle ugens dage.</p>
 
             <form>
                 <label class="visually-hidden" for="navn">Navn</label>
@@ -26,7 +46,7 @@
                 <label class="visually-hidden" for="adresse">Adresse</label>
                 <input id="adresse" type="text" placeholder="Adresse">
 
-                <!-----Dropdown---->
+                <!--Dropdown-->
                 <div class="custom-select">
                     <label for="region">Vælg region</label>
                     <select id="region">
@@ -39,22 +59,22 @@
                     </select>
                 </div>
 
-                <!---------------Checkbox af services------------------>
+                <!--Checkbox af services-->
                 <fieldset class="checkbox">
-                    <legend>Hvilke Services ønsker du tilbud på?</legend>
+                    <legend>Hvor mange dage ønsker du?</legend>
                     <div>
-                        <input type="checkbox" id="rengoering">
-                        <label for="rengoering">Rengøring</label>
+                        <input type="checkbox" id="syv-dage">
+                        <label for="syv-dage">Syv dage</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="bilrengoering">
-                        <label for="bilrengoering">Bilrengøring</label>
+                        <input type="checkbox" id="fem-dage">
+                        <label for="fem-dage">Fem dage</label>
                     </div>
 
                      <div>
-                        <input type="checkbox" id="vindue">
-                        <label for="vindue">Vindue</label>
+                        <input type="checkbox" id="vaelger-selv">
+                        <label for="vaelger-selv">Vælger selv</label>
                     </div>
                 </fieldset>
                 
@@ -75,6 +95,20 @@
 
             </form>
     </main>
-    
+
+     <footer>
+        <div class="footer-links">
+            <p>Kontakt</p>
+           
+
+        </div>
+        
+        <div class="footer-links">
+            <p>Om os</p>
+            
+
+        </div>
+    </footer>
+     
 </body>
 </html>
