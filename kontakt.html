@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kontaktform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+         <!--Kontaktform - hovedindhold--> 
+    <main class="kontaktform">
+        <h1>Kontakt os</h1>
+            <p class="kontakt-tekst">Skriv til os via kontaktformularen og så vender vi tilbage til dig</p>
+
+            <form>
+                <label class="visually-hidden" for="navn">Navn</label>
+                <input id="navn" type="text" placeholder="Navn" required>
+
+                <label class="visually-hidden" for="mail">E-mail</label>
+                <input id="mail" type="email" placeholder="E-mail">
+
+                <label class="visually-hidden" for="tel">Telefon</label>
+                <input id="tel" type="tel" placeholder="Telefon">
+                
+                <label class="visually-hidden" for="adresse">Adresse</label>
+                <input id="adresse" type="text" placeholder="Adresse">
+
+                <!-----Dropdown---->
+                <div class="custom-select">
+                    <label for="region">Vælg region</label>
+                    <select id="region">
+                        <option value="0" selected="true" disabled>Vælg region</option>
+                        <option value="1">Syddanmark</option>
+                        <option value="2">Sjælland</option>
+                        <option value="3">Hovedstaden</option>
+                        <option value="4">Nordjylland</option>
+                        <option value="5">Midtjylland</option>
+                    </select>
+                </div>
+
+                <!---------------Checkbox af services------------------>
+                <fieldset class="checkbox">
+                    <legend>Hvilke Services ønsker du tilbud på?</legend>
+                    <div>
+                        <input type="checkbox" id="rengoering">
+                        <label for="rengoering">Rengøring</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="bilrengoering">
+                        <label for="bilrengoering">Bilrengøring</label>
+                    </div>
+
+                     <div>
+                        <input type="checkbox" id="vindue">
+                        <label for="vindue">Vindue</label>
+                    </div>
+                </fieldset>
+                
+                <label for="besked">Besked</label>
+                <textarea id="besked" cols="30" rows="10"></textarea>
+
+                <fieldset>
+                    <legend>Må vi kontakte dig på telefon?</legend>
+
+                    <input id="ja" type="radio" name="kontakt">
+                    <label for="ja">Ja</label>
+
+                    <input id="nej" type="radio" name="kontakt">
+                    <label for="nej">Nej</label>
+                </fieldset>
+
+                <input type="submit" name="submit" value="Send besked">
+
+            </form>
+    </main>
+    
+</body>
+</html>

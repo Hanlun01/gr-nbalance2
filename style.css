@@ -232,42 +232,42 @@ nav ul li a{
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: block;
     margin-top: 1em;
-    cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.blok-billede-link img:hover{
-    transform: scale(1.03);
-    opacity: 0.9;
-}
 
-.billede-knap{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+
+.billede-knap--mobile,
+.billede-knap--desktop{
     background-color: #ffffffcc;
-    opacity: 95%;
     padding: 1em 2em;
     font-size: 1.1em;
     border-radius: 8px;
     font-weight: 600;
     color: #111;
-    backdrop-filter: blur(3px);
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     text-decoration: none;
-
-    min-width: 140px;
-    min-height: 44px; /*wcag princip*/ 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    min-height: 44px; /*wcag.*/
+    border: none;
 }
 
-.blok-billede-link:hover .billede-knap{
+.billede-knap--mobile{
+    display: block;
+    width: 100%;
+    margin-top: 0.8em;
+    text-align: center;
+}
+
+.billede-knap--desktop{
+    display: none;
+}
+
+.billede-knap--mobile:hover,
+.billede-knap--desktop:hover{
     background-color: #c0c96a;
-    transform: translateX(-50%) scale(1.05);
+    transform: scale(1.03);
 }
-
 
 
 .desktop-tekst{
@@ -612,6 +612,41 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         display: block;
     }
     
+
+
+}
+
+/*Dekstop blok-knap*/
+@media (min-width: 769px){
+.blok{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+    text-align: left;
+    padding: 4em 6em;
+}
+
+.blok-indhold{
+    flex: 1;
+    max-width: 50%;
+}
+
+.blok-billede-link{
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+}
+
+.billede-knap--desktop{
+    display: inline-block;
+    width: auto;
+    margin-top: 1.5em;
+}
+
+.billede-knap--mobile{
+    display: none;
+}
 
 
 }
