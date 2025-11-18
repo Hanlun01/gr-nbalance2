@@ -337,24 +337,54 @@ nav ul li a{
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-/**Se mere pil**/
+/**Se flere opskrifter pil**/
 .se-mere{
     margin-top: 2.5em;
-    color: #111;
-    font-size: 1.2em;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4em;
+    justify-content: center;
 }
 
-.se-mere i{
-    font-size: 1.2em;
+.se-mere-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.8em 1.4em;
+    border-radius: none;
+    border: none;
+    text-decoration: none;
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 600;
+    min-height: 44px;
+    transition: transform 0.25s ease;
+}
+
+.se-mere-text,
+.se-mere-link i{
+font-size: 1.2rem;
+transition: transform 0.25s ease;
+}
+
+.se-mere-link:hover .se-mere-text{
+text-decoration: none;
+}
+
+.se-mere-link:hover{
+    transform: translateY(-2px) scale(1.06);
+}
+
+.se-mere-link:hover i{
+    transform: translateY(3px) scale(1.15s);
+}
+
+.se-mere-link:focus-visible{
+    outline: 3px solid #232415;
+    outline-offset: 4px;
 }
 
 .se-mere a{
     text-decoration: none;
-    color: #000;
+    color: #222;
     font-size: 1.2em;
     display: flex;
     flex-direction: column;
