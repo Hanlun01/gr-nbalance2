@@ -124,6 +124,40 @@ nav ul li a{
     transform: scale(1.03);
 }
 
+/**Sprog valg**/
+.lang-switch{
+    display:flex ;
+    align-items: center;
+    gap: 0.5em;
+    margin-left: auto;
+}
+
+.lang-option{
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    padding: 0.2em 0.5em;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+.lang-option:hover{
+    background-color: #8f9655;
+}
+
+
+.lang-option:focus-visible{
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+.lang-switch span{
+    color: white;
+    font-weight: 600;
+}
+
 /**Logo**/
 .logo{
     height: 4em;
