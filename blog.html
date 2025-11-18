@@ -8,16 +8,17 @@
     <script src="https://kit.fontawesome.com/a0f7544959.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <header>
-        <nav><!---------------------Navigation og logo------------------------>
+        <nav><!--Logo-->
             <a href="index.html"><img class="logo" src="img/logo-grøn-balance.svg" alt="Grøn Balance logo"></a>
 
-            <!------------Hamburger----------->
-            <div id="bars">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <!-------------------------------->
-            <ul class="nav-menu"> <!--Desktop menu-->
+          <button id="bars" class="menu-toggle" aria-expanded="false" aria-label="Åbn menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!--Desktop menu-->
+            <ul class="nav-menu"> 
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Opskrifter</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -127,6 +128,6 @@
     </footer>
     
     </main>
-
+<script src="scripts/navigation.js"></script>
 </body>
 </html>

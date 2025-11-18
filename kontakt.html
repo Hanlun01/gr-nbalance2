@@ -9,15 +9,16 @@
 <body>
 
     <header>
-        <nav><!--Navigation og logo-->
+        <nav><!--Logo-->
             <a href="index.html"><img class="logo" src="img/logo-grøn-balance.svg" alt="Grøn Balance logo"></a>
 
-            <!--Hamburger-->
-            <div id="bars">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        <!---->
-            <ul class="nav-menu"> <!--Desktop menu-->
+            <!--Burger menu mobil-->
+          <button id="bars" class="menu-toggle" aria-expanded="false" aria-label="Åbn menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!--Desktop menu-->
+            <ul class="nav-menu"> 
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Opskrifter</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -26,8 +27,10 @@
             </ul>
         </nav>
     </header>
+
     
     <section class="kontakt-header">
+        <img src="img/gulerødder.jpg" alt="">
     <h1 class="kontakt-h1">Har du spørgsmål eller brug for vejledning?</h1>
     <h2>Skriv til os</h2>
 </section>
@@ -66,21 +69,21 @@
                 </div>
 
                 <!--Checkbox af services-->
-                <fieldset class="checkbox">
-                    <legend>Hvor mange dage ønsker du?</legend>
+                <fieldset class="radio">
+                    <legend>Hvad kan vi hjælpe dig med?</legend>
                     <div>
-                        <input type="checkbox" id="syv-dage">
-                        <label for="syv-dage">Syv dage</label>
+                        <input type="radio" id="madplan" name="hjaelp">
+                        <label for="madplan">Madplan</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="fem-dage">
-                        <label for="fem-dage">Fem dage</label>
+                        <input type="radio" id="baeredygtige-opskrifter" name="hjaelp">
+                        <label for="baeredygtige-opskrifter">Bæredygtige opskrifter</label>
                     </div>
 
                      <div>
-                        <input type="checkbox" id="vaelger-selv">
-                        <label for="vaelger-selv">Vælger selv</label>
+                        <input type="radio" id="andet" name="hjaelp">
+                        <label for="andet">Andet</label>
                     </div>
                 </fieldset>
                 
@@ -129,6 +132,7 @@
         <p class="copyright">© 2025 Grøn Balance</p>
 
     </footer>
-     
+    
+<script src="scripts/navigation.js"></script>
 </body>
 </html>

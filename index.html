@@ -11,18 +11,20 @@
     <title>Grøn Balance</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a0f7544959.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <header>
-        <nav><!--Navigation og logo-->
+        <nav><!--Logo-->
             <a href="index.html"><img class="logo" src="img/logo-grøn-balance.svg" alt="Grøn Balance logo"></a>
 
-            <!--Hamburger-->
-            <div id="bars">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        <!---->
-            <ul class="nav-menu"> <!--Desktop menu-->
+            <!--Burger menu mobil-->
+          <button id="bars" class="menu-toggle" aria-expanded="false" aria-label="Åbn menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!--Desktop menu-->
+            <ul class="nav-menu"> 
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Opskrifter</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -40,9 +42,12 @@
         <div class="hero-tekst">
             <h1>Grøn Balance</h1>
             
+            <p class="hero-tagline">Viden, opskrifter og grøn inspiration.<br>
+            Alt samlet ét sted for en mere bæredygtig hverdag.</p>
+
             <!--Søgebar-->
 
-           <form class="søgebar" action="#" method="get">
+           <form class="søgebar" action="#" method="get" role="search">
 
             <label for="search" class="visually-hidden">Søg efter opskrifter</label>
 
@@ -53,14 +58,12 @@
                 Søg</button>
            </form>
 
-           <h2 class="overskrift2">Nemt. Sundt. Bæredygtigt.</h2>
-
         </div>
     </section>
 
     <div class="underheader1"> <!--Underheader 1-->
-        <p>Find inspiration til nemme, sunde og bæredygtige opskrifter, der passer lige præcis til din hverdag.
-        </p>
+        <h2>Find inspiration til nemme, sunde og bæredygtige opskrifter, der passer lige præcis til din hverdag.
+        </h2>
     </div>
 
     <section class="opskrifter">
@@ -146,5 +149,6 @@
         <p class="copyright">© 2025 Grøn Balance</p>
     </footer>
 
+<script src="scripts/navigation.js"></script>
 </body>
 </html>
