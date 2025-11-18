@@ -1,9 +1,20 @@
-const bars = document.querySelector("#bars");
+document.addEventListener("DOMContentLoaded", () => {
+    const bars = document.querySelector("#bars");
+    const navMenu = document.querySelector(".nav-menu");
+    const icon = bars ? bars.querySelector("i") : null;
 
-const openNav = () => {
-    document.querySelector(".nav-menu").classList.toggle("show");
-    document.querySelector("#bars i").classList.toggle("fa-bars");
-    document.querySelector("#bars i").classList.toggle("fa-xmark");
-}
+    if (!bars || !navMenu || !icon) return; // sikkerheds-tjek
 
-bars.addEventListener("click", openNav);
+    const openNav = () => {
+        const isOpen = navMenu.classList.toggle("show");
+
+        // skift ikon
+        icon.classList.toggle("fa-bars", !isOpen);
+        icon.classList.toggle("fa-xmark", isOpen);
+
+        // opdater aria-expanded for WCAG
+        bars.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    };
+
+    bars.addEventListener("click", openNav);
+});
