@@ -130,6 +130,15 @@ nav ul li a{
     width: auto;
 }
 
+.logo-wrap{
+    background: white;
+    border-radius: 50%;
+    padding: 0.4em;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+/**Logo slut**/
 
 .hero{
     position: relative;
@@ -418,8 +427,7 @@ text-decoration: none;
     display: block;
     margin-top: 1em;
 }
-/**Blog forslag på forsiden*/
-
+/**Blog forslag på forsiden slut*/
 
 .billede-knap--mobile,
 .billede-knap--desktop{
@@ -466,51 +474,76 @@ text-decoration: none;
     width: 100%;
 }
 
+/**Ofte stillede spørgsmål**/
+
 .spørg-sektion{
     background-color: #F9F9F3;
     padding: 3em 1.5em;
     text-align: left;
 }
 
-details {
+.faq-item{
     border-top: 2px solid #222;
     padding: 1em 0;
-    cursor: pointer;
-    text-shadow: 0 3px 10px rgba(0,0,0,0.12);
 }
 
-summary{
-    font-size: 1.2em;
-    font-weight: 500;
-    list-style: none;
+.faq-item summary{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.4em 0;
 }
 
-summary::after{
-    font-size: 1.2em;
-    transition: transform 0.3s ease;
+.faq-item summary:focus-visible{
+    outline: 3px solid #232415;
+    outline-offset: 3px;
 }
 
-summary i{
-   transition: transform 0.3s ease, color 0.3s ease;
+.faq-title, .faq-item summary i{
+    transition: transform 0.25s ease, text-decoration 0.2s ease;
 }
 
-summary:hover i{
-    transform: scale(11.2em);
+.faq-item summary:hover .faq-title, .faq-item summary:hover i{
+    color: #8f9655;
+    transform: translateX(2px);
 }
 
-details[open] summary::after{
-    transform: rotate(180deg);
-}
-
-details p{
-    margin-top: 1em;
-    color: #333;
+.faq-item p{
+    margin-top: 0.75em;
     line-height: 1.6;
+    color: #333;
 }
 
+.faq-link{
+    display: inline-block;
+    margin-top: 0.7em;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    min-height: 44px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.faq-link:hover{
+    background-color: #8f9655;
+    color: white;
+    transform: scale(1.03)
+}
+
+.faq-link:focus-visible{
+    outline: 3px solid #232415;
+    outline-offset: 3px;
+} /**Ofte stillede spørgsmål slut**/
+
+
+/**Footer**/
 footer.footer{
     background-color: #707644;
     color: white;
@@ -519,6 +552,12 @@ footer.footer{
     justify-content: space-between;
     padding: 3em 2em;
     gap: 2em;
+}
+
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
 }
 
 .footer-section h4{
@@ -548,15 +587,32 @@ footer.footer{
     outline: none;
 }
 
+.lang-btn{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
 .lang-btn img{
-    width: 32px;
+    width: 40px;
     height: auto;
+    display: block;
     border-radius: 4px;
+}
+
+.lang-btn:hover{
+    transform: scale(1.05);
 }
 
 .lang-btn:focus-visible{
     outline: 3px solid white;
-    outline-offset: 3px;
+    outline-offset: 4px;
 }
 
 .copyright{
@@ -565,11 +621,10 @@ footer.footer{
     margin-top: 1em;
     opacity: 0.8;
     font-size: 0.9rem;
-}
+} /**Footer slut**/
 
 
-/***********************************************BLOG********************************************/
-
+/**BLOG**/
 .page-sep{
     background-color: #F0EEDB;
     height: 25px;
@@ -625,7 +680,7 @@ box-sizing: border-box;
 .artikel-tekst{
 background: #F0EEDB;
 margin-top: 20px;
-padding: 30px 24px; /**wcag. Flere pixels giver mere ro*/
+padding: 30px 24px;
 border-radius: 6px;
 box-shadow: 0 4px 12px rgba(0,0,0,0.1);    
 }
@@ -686,19 +741,10 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         display: block;
     }
 
-    .rel-grid a img{
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        cursor: pointer;
-    }
-
-    .rel-grid a img:hover{
-        transform: scale(1.03);
-        opacity: 0.9;
-    }
-
-       .rel-grid li:nth-child(n+3) {
+       .rel-grid li:nth-child(n+3){
         display: none;
 }
+/**BLOG slut**/
 
 
 /**Kontaktform**/

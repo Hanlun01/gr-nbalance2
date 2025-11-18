@@ -11,7 +11,7 @@
 
     <header>
         <nav><!--Logo-->
-            <a href="index.html"><img class="logo" src="img/logo-grøn-balance.svg" alt="Grøn Balance logo"></a>
+            <a href="index.html" class="logo-wrap"><img class="logo" src="img/logo-grøn-balance.svg" alt="Grøn Balance logo"></a>
 
           <button id="bars" class="menu-toggle" aria-expanded="false" aria-label="Åbn menu">
             <i class="fa-solid fa-bars"></i>
@@ -58,47 +58,68 @@
 
         <div class="rel-wrap">
 
-            <ul class="rel-grid">
-                <li>
-                    <a href="#">
-                        <img src="img/bowl.jpg" alt="Grøntsags bowl">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/vegansk-pasta.jpg" alt="Vegansk pastaret">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/gulerodsuppe.jpg" alt="Gulerodsuppe">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="img/stegt-kylling.jpg" alt="Stegt kylling">
-                    </a>
-                </li>
+<ul class="rel-grid">
+    <li>
+        <a href="#" class="opskrift-kort" aria-label="Læs mere om grøntsags bowl opskrift">
+            <img src="img/bowl.jpg" alt="Grøntsags bowl">
+            <span class="opskrift-overlay">
+                <span class="opskrift-btn">Læs mere</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="opskrift-kort" aria-label="Læs mere om vegansk pasta opskrift">
+            <img src="img/vegansk-pasta.jpg" alt="Vegansk pastaret">
+            <span class="opskrift-overlay">
+                <span class="opskrift-btn">Læs mere</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="opskrift-kort" aria-label="Læs mere om gulerodssuppe opskrift">
+            <img src="img/gulerodsuppe.jpg" alt="Gulerodsuppe">
+            <span class="opskrift-overlay">
+                <span class="opskrift-btn">Læs mere</span>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="opskrift-kort" aria-label="Læs mere om stegt kylling opskrift">
+            <img src="img/stegt-kylling.jpg" alt="Stegt kylling">
+            <span class="opskrift-overlay">
+                <span class="opskrift-btn">Læs mere</span>
+            </span>
+        </a>
+    </li>
+</ul>
 
-            </ul>
 
         </div>
     </section>
 
-    <section class="spørg-sektion">
-        <details>
-            <summary>Ofte stillede spørgsmål
-                <i class="fas fa-chevron-down"></i>
-            </summary>
-            <p>Heer kan du finde svar på de mest almindelige spørgsmål om sundhed, klima og madvaner.</p>
-        </details>
-        <details>
-            <summary>Opskrifter og inspiration
-                <i class="fas fa-chevron-down"></i>
-            </summary>
-            <p>Udforsk ideer til nye retter, der kombinerer smag, kvalitet og omtanke for miljøet.</p>
-        </details>
-    </section>
+    <section class="spørg-sektion" aria-label="Ofte stillede spørgsmål">
+    <details class="faq-item">
+        <summary>
+            <span class="faq-title">Ofte stillede spørgsmål</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+
+        <p>Her kan du finde svar på de mest almindelige spørgsmål om sundhed, klima og madvaner.</p>
+
+        <a href="#" class="faq-link">Læs mere</a>
+    </details>
+
+    <details class="faq-item">
+        <summary>
+            <span class="faq-title">Opskrifter og inspiration</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+
+        <p>Udforsk ideer til nye retter, der kombinerer smag, kvalitet og omtanke for miljøet.</p>
+
+        <a href="#" class="faq-link">Se alle tips</a>
+    </details>
+</section>
 
     <footer class="footer">
         <div class="footer-section">
@@ -120,7 +141,10 @@
         <div class="footer-section">
             <h4>Sprog</h4>
             <button class="lang-btn">
-                <img src="" alt="Skift til engelsk">
+                <img src="img/uk-flag.svg" alt="Skift til engelsk">
+            </button>
+            <button class="lang-btn">
+                <img src="img/dk-flag.svg" alt="Skift til dansk">
             </button>
         </div>
 

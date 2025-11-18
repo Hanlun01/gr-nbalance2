@@ -16,7 +16,7 @@
 <body>
     <header>
         <nav><!--Logo-->
-            <a href="index.html"><img class="logo" src="img/logo-grøn-balance.svg" alt="Grøn Balance logo"></a>
+            <a href="index.html" class="logo-wrap"><img class="logo" src="img/logo-grøn-balance.svg" alt="Grøn Balance logo"></a>
 
             <!--Burger menu mobil-->
           <button id="bars" class="menu-toggle" aria-expanded="false" aria-label="Åbn menu">
@@ -31,6 +31,8 @@
             <li><a href="#">Om os</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
+
+            
         </nav>
     </header>
 
@@ -141,22 +143,31 @@
 </section>
 
     <div class="grøn-linje"></div>
+    
+    <!--ofte stillede spørgsmål-->
+    <section class="spørg-sektion" aria-label="Ofte stillede spørgsmål">
+    <details class="faq-item">
+        <summary>
+            <span class="faq-title">Ofte stillede spørgsmål</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
 
-    <section class="spørg-sektion">
-        <details>
-            <summary>Ofte stillede spørgsmål
-                <i class="fas fa-chevron-down"></i>
-            </summary>
-            <p>Her kan du finde svar på de mest almindelige spørgsmål om sundhed, klima og madvaner.</p>
-        </details>
-        <details>
-            <summary>Opskrifter og inspiration
-                <i class="fas fa-chevron-down"></i>
-            </summary>
-            <p>Udforsk ideer til nye retter, der kombinerer smag, kvalitet og omtanke for miljøet.</p>
-        </details>
-    </section>
+        <p>Her kan du finde svar på de mest almindelige spørgsmål om sundhed, klima og madvaner.</p>
 
+        <a href="#" class="faq-link">Læs mere</a>
+    </details>
+
+    <details class="faq-item">
+        <summary>
+            <span class="faq-title">Opskrifter og inspiration</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+
+        <p>Udforsk ideer til nye retter, der kombinerer smag, kvalitet og omtanke for miljøet.</p>
+
+        <a href="#" class="faq-link">Se alle tips</a>
+    </details>
+</section>
 
     </main>
 
@@ -180,7 +191,10 @@
         <div class="footer-section">
             <h4>Sprog</h4>
             <button class="lang-btn">
-                <img src="" alt="Skift til engelsk">
+                <img src="img/uk-flag.svg" alt="Skift til engelsk">
+            </button>
+            <button class="lang-btn">
+                <img src="img/dk-flag.svg" alt="Skift til dansk">
             </button>
         </div>
 
