@@ -86,6 +86,7 @@ header nav{
     display: none;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 .nav-menu.show{
@@ -269,6 +270,64 @@ nav ul li a{
     margin: 0 auto;
 }
 
+/**Overlay-knap på opskrift-kort**/
+
+.opskrift-kort{
+    position: relative;
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.opskrift-kort img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.opskrift-overlay{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.45);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.opskrift-btn{
+    background-color: #8f9655;
+    color: white;
+    padding: 0.8em 1.8em;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.opskrift-kort:hover img, .opskrift-kort:focus-visible img{
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+.opskrift-kort:hover .opskrift-overlay, .opskrift-kort:focus-visible .opskrift-overlay{
+    opacity: 1;
+}
+
+.opskrift-kort:focus-visible{
+    outline: 3px solid #707644;
+    outline-offset: 4px;
+}
+
 .opskrift-grid img{
     width: 100%;
     aspect-ratio: 1/1;
@@ -278,11 +337,7 @@ nav ul li a{
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-.opskrift-grid a img:hover{
-    transform: scale(1.03);
-    opacity: 0.9;
-}
-
+/**Se mere pil**/
 .se-mere{
     margin-top: 2.5em;
     color: #111;
