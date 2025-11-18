@@ -125,11 +125,51 @@ nav ul li a{
 }
 
 /**Sprog valg**/
+
 .lang-switch{
-    display:flex ;
+    display:none;
+}
+
+.lang-mobile{
+    display: flex;
     align-items: center;
     gap: 0.5em;
-    margin-left: auto;
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.lang-mobile-btn{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.3em 0.6em;
+    border-radius: 6px;
+    cursor: pointer;
+    min-height: 44px;
+}
+
+.lang-mobile-btn:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white
+}
+
+
+.lang-mobile-btn:focus-visible{
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+.lang-mobile span{
+    color: white;
+    font-weight: 600;
+}
+
+.lang-mobile-btn:focus-visible{
+    outline: 3px solid white;
+    outline-offset: 3px;
 }
 
 .lang-option{
@@ -1074,6 +1114,21 @@ input[type=submit]:hover{
 .kontakt-header h2{
     font-size: 1.7rem;
     margin-bottom: 1.2rem;
+}
+
+}
+
+/**sprogvalg på desktop**/
+@media (min-width:769px){
+    .lang-switch{
+    display:flex ;
+    align-items: center;
+    gap: 0.5em;
+    margin-left: auto;
+}
+
+.lang-mobile{
+    display: none;
 }
 
 }
