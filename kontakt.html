@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
     <title>kontaktform</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a0f7544959.js" crossorigin="anonymous"></script>
@@ -25,7 +31,20 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="#">Om os</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
+
+                        <li class="lang-mobile">
+                <button class="lang-mobile-btn lang-mobile-active" lang="da" aria-current="true" aria-label="Dansk valgt. Skift til dansk.">DA</button>
+                <span aria-hidden="true">|</span>
+                <button class="lang-mobile-btn" lang="en" aria-label="Skift til engelsk">EN</button>
+            </li>
             </ul>
+
+                        <!--Sprogvalg på dekstop-->
+                <div class="lang-switch" role="group" aria-label="Sprogvalg">
+                    <a href="#" class="lang-option lang-active" lang="da" aria aria-current="true" aria-label="Dansk valgt. Skift til dansk.">DA</a>
+                        <span aria-hidden="true">|</span>
+                        <a href="#" class="lang-option" lang="en" aria-label="Skift til engelsk">EN</a>
+                </div>
         </nav>
     </header>
 
@@ -38,11 +57,6 @@
 
     <main class="kontaktform">
          <!--Kontaktform - hovedindhold--> 
-
-            <section>
-
-            </section>
-
             <form>
                 <label class="visually-hidden" for="navn">Navn</label>
                 <input id="navn" type="text" placeholder="Navn" required>
@@ -60,7 +74,7 @@
                 <div class="custom-select">
                     <label for="region">Vælg region</label>
                     <select id="region">
-                        <option value="0" selected="true" disabled>Vælg region</option>
+                        <option value="0" selected disabled>Vælg region</option>
                         <option value="1">Syddanmark</option>
                         <option value="2">Sjælland</option>
                         <option value="3">Hovedstaden</option>
@@ -102,10 +116,12 @@
                 </fieldset>
 
                 <input type="submit" name="submit" value="Send besked">
-
             </form>
+        </main>
+        
 
-                <section class="spørg-sektion" aria-label="Ofte stillede spørgsmål">
+          <!--ofte stillede spørgsmål-->
+        <section class="spørg-sektion" aria-label="Ofte stillede spørgsmål">
     <details class="faq-item">
         <summary>
             <span class="faq-title">Ofte stillede spørgsmål</span>
@@ -128,8 +144,6 @@
         <a href="#" class="faq-link">Se alle tips</a>
     </details>
 </section>
-            
-    </main>
 
    <footer class="footer">
         <div class="footer-section">

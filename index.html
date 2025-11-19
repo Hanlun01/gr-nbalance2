@@ -32,18 +32,19 @@
             <li><a href="kontakt.html">Kontakt</a></li>
 
         <!--sprogvalg på mobil-->
-            <li class="lang-mobile" aria-label="Sprogvalg">
-                <button class="lang-mobile-btn lang-mobile-active" lang="da">DA</button>
+                        <li class="lang-mobile">
+                <button class="lang-mobile-btn lang-mobile-active" lang="da" aria-current="true" aria-label="Dansk valgt. Skift til dansk.">DA</button>
                 <span aria-hidden="true">|</span>
-                <button class="lang-mobile-btn" lang="en">EN</button>
+                <button class="lang-mobile-btn" lang="en" aria-label="Skift til engelsk">EN</button>
             </li>
-        </ul>
-            <!--Sprogvalg på dekstop-->
-            <div class="lang-switch" aria-label="Sprogvalg">
-                <a href="#" class="lang-option lang-active" lang="da">DA</a>
-                <span aria-hidden="true">|</span>
-                <a href="#" class="lang-option" lang="en">EN</a>
-            </div>
+            </ul>
+
+                        <!--Sprogvalg på dekstop-->
+                <div class="lang-switch" role="group" aria-label="Sprogvalg">
+                    <a href="#" class="lang-option lang-active" lang="da" aria aria-current="true" aria-label="Dansk valgt. Skift til dansk.">DA</a>
+                        <span aria-hidden="true">|</span>
+                        <a href="#" class="lang-option" lang="en" aria-label="Skift til engelsk">EN</a>
+                </div>
         </nav>
     </header>
 
@@ -81,63 +82,62 @@
 
     <!--Opskrifter-->
 
-    <section class="opskrifter" id="opskrifter">
+    <section class="opskrifter" id="opskrifter" aria-labelledby="opskrifter-heading">
+           <h2 id="opskrifter-heading" class="visually-hidden">Opskrifter</h2>
         
-        <div class="opskrift-grid">
+<div class="opskrift-grid">
 
-            <a href="#" class="opskrift-kort" aria-label="Læs mere om gulerodsuppe opskrift">
-                <img src="img/gulerodsuppe.jpg" alt="Gulerodsuppe opskrift">
-                <span class="opskrift-overlay">
-                <span class="opskrift-btn">Læs mere</span>
-            </span>
-            </a>
-
-            <a href="#" class="opskrift-kort" aria-label="Læs mere om Rød suppe opskrift">
-                <img src="img/opskriftbillede.jpg" alt="Rød suppe opskrift">
-                <span class="opskrift-overlay">
-            <span class="opskrift-btn">Læs mere</span>
-            </span>
-            </a>
-
-            <a href="#" class="opskrift-kort" aria-label="Læs mere om grøntsags bowl opskrift">
-            <img src="img/bowl.jpg" alt="Grøntsags bowl opskrift">             
-            <span class="opskrift-overlay">
-            <span class="opskrift-btn">Læs mere</span>
-            </a>
-
-            <a href="#" class="opskrift-kort" aria-label="Læs mere om stegt kylling og salat opskrift">
-            <img src="img/stegt-kylling.jpg" alt="Stegt kylling og salat opskrift">
-            <span class="opskrift-overlay">
-            <span class="opskrift-btn">Læs mere</span></a>
-
-            <a href="#" class="opskrift-kort" aria-label="Læs mere om vegansk pasta opskrift">
-            <img src="img/vegansk-pasta.jpg" alt="Vegansk Pasta opskrift">
-            <span class="opskrift-overlay">
-            <span class="opskrift-btn">Læs mere</span>
-            </a>
-
-            <a href="#" class="opskrift-kort" aria-label="Læs mere om tomat og ærter opskrift">
-            <img src="img/tomat-og-ærter.jpg" alt="Tomat og ærter opskrift">
-            <span class="opskrift-overlay">
+    <a href="#" class="opskrift-kort" aria-label="Læs mere om gulerodsuppe opskrift">
+        <img src="img/gulerodsuppe.jpg" alt="Gulerodsuppe opskrift">
+        <span class="opskrift-overlay">
             <span class="opskrift-btn">Læs mere</span>
         </span>
     </a>
-        </div>
 
-        <!--Se flere opskrifter-->
-        <div class="se-mere">
-            <a href="#opskrifter" class="se-mere-link">
-                <span class="se-mere-text">Se mere</span> <i class="fas fa-chevron-down" aria-hidden="true"></i>
-            </a>
-        </div>
-        <!--Se flere opskrifter slut-->
+    <a href="#" class="opskrift-kort" aria-label="Læs mere om rød suppe opskrift">
+        <img src="img/opskriftbillede.jpg" alt="Rød suppe opskrift">
+        <span class="opskrift-overlay">
+            <span class="opskrift-btn">Læs mere</span>
+        </span>
+    </a>
 
+    <a href="#" class="opskrift-kort" aria-label="Læs mere om grøntsags bowl opskrift">
+        <img src="img/bowl.jpg" alt="Grøntsags bowl opskrift">
+        <span class="opskrift-overlay">
+            <span class="opskrift-btn">Læs mere</span>
+        </span>
+    </a>
 
-    <section class="blok">
+    <a href="#" class="opskrift-kort" aria-label="Læs mere om stegt kylling opskrift">
+        <img src="img/stegt-kylling.jpg" alt="Stegt kylling opskrift">
+        <span class="opskrift-overlay">
+            <span class="opskrift-btn">Læs mere</span>
+        </span>
+    </a>
+
+    <a href="#" class="opskrift-kort" aria-label="Læs mere om vegansk pasta opskrift">
+        <img src="img/vegansk-pasta.jpg" alt="Vegansk pasta opskrift">
+        <span class="opskrift-overlay">
+            <span class="opskrift-btn">Læs mere</span>
+        </span>
+    </a>
+
+    <a href="#" class="opskrift-kort" aria-label="Læs mere om tomat og ærter opskrift">
+        <img src="img/tomat-og-ærter.jpg" alt="Tomat og ærter opskrift">
+        <span class="opskrift-overlay">
+            <span class="opskrift-btn">Læs mere</span>
+        </span>
+    </a>
+
+</div>
+
+</section>
+
+<section class="blok">
     <div class="blok-indhold">
         <h3>Den bæredygtige tallerken</h3>
         <p class="desktop-tekst">
-            Læs om hvordan du nemt kan gøre dine måltider mere klimavenlige uden at gå på kompromis med smag, kvalitet og sundhed. 
+            Læs om hvordan du nemt kan gøre dine måltider mere klimavenlige uden at gå på kompromis med smag, kvalitet og sundhed.
             Få indsigt i hvordan små valg i køkkenet kan mindske dit klimaaftryk og samtidig give kroppen mere næring og energi i hverdagen.
         </p>
 
@@ -146,16 +146,19 @@
     </div>
 
     <div class="blok-billede-link">
-        <img src="img/billede2.jpg" alt="">
+        <img src="img/billede2.jpg" alt="Et farverigt måltid med grøntsager, brød og frugt.">
 
         <!-- Knap på mobil -->
         <a href="blog.html" class="billede-knap--mobile">Læs mere</a>
     </div>
 </section>
 
+
     <div class="grøn-linje"></div>
-    
-    <!--ofte stillede spørgsmål-->
+
+    </main>
+
+     <!--ofte stillede spørgsmål-->
     <section class="spørg-sektion" aria-label="Ofte stillede spørgsmål">
     <details class="faq-item">
         <summary>
@@ -179,8 +182,6 @@
         <a href="#" class="faq-link">Se alle tips</a>
     </details>
 </section>
-
-    </main>
 
      <footer class="footer">
         <div class="footer-section">

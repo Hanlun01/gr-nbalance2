@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
     <title>Blog</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a0f7544959.js" crossorigin="anonymous"></script>
@@ -24,7 +30,20 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="#">Om os</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
+
+                        <li class="lang-mobile">
+                <button class="lang-mobile-btn lang-mobile-active" lang="da" aria-current="true" aria-label="Dansk valgt. Skift til dansk.">DA</button>
+                <span aria-hidden="true">|</span>
+                <button class="lang-mobile-btn" lang="en" aria-label="Skift til engelsk">EN</button>
+            </li>
             </ul>
+
+                        <!--Sprogvalg på dekstop-->
+                <div class="lang-switch" role="group" aria-label="Sprogvalg">
+                    <a href="#" class="lang-option lang-active" lang="da" aria aria-current="true" aria-label="Dansk valgt. Skift til dansk.">DA</a>
+                        <span aria-hidden="true">|</span>
+                        <a href="#" class="lang-option" lang="en" aria-label="Skift til engelsk">EN</a>
+                </div>
         </nav>
     </header>
 
@@ -92,11 +111,11 @@
         </a>
     </li>
 </ul>
-
-
         </div>
     </section>
-
+     </main>
+     
+      <!--ofte stillede spørgsmål-->
     <section class="spørg-sektion" aria-label="Ofte stillede spørgsmål">
     <details class="faq-item">
         <summary>
@@ -151,7 +170,6 @@
         <p class="copyright">© 2025 Grøn Balance</p>
     </footer>
     
-    </main>
 <script src="scripts/navigation.js"></script>
 </body>
 </html>
